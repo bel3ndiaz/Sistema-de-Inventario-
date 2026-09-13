@@ -28,6 +28,31 @@ def validarStock(cantidad, umbral=5):
     return cantidad < umbral
 
 
+def registrarProducto(nombre, precio, cantidad, inventario):
+    """
+    Registra un nuevo producto en el inventario.
+    Usa calcularTotal() y validarStock() internamente.
+    Parámetros:
+        nombre (str): nombre del producto
+        precio (float): precio unitario
+        cantidad (int): cantidad disponible
+        inventario (list): lista donde se guardan los productos
+    Retorna:
+        list: el inventario actualizado con el nuevo producto
+    """
+    total = calcularTotal(precio, cantidad)
+    stock_bajo = validarStock(cantidad)
+
+    producto = {
+        "nombre": nombre,
+        "precio": precio,
+        "cantidad": cantidad,
+        "total": total,
+        "stock_bajo": stock_bajo,
+    }
+
+    inventario.append(producto)
+    return inventario
 
 
 def buscarProducto(nombre, inventario):
