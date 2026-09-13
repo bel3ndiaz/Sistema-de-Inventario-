@@ -35,20 +35,7 @@ def main():
             else:
                 print("Producto no encontrado.")
 
-        elif opcion == "3":
-            reporte = generarReporte(inventario)
-            print(f"Valor total del inventario: {reporte['valor_total']}")
-            if reporte["productos_bajo_stock"]:
-                print("Productos con stock bajo:", reporte["productos_bajo_stock"])
-            else:
-                print("Ningún producto con stock bajo.")
-
-        elif opcion == "4":
-            print("Saliendo del sistema...")
-
-        else:
-            print("Opción no válida, intenta de nuevo.")
-
+       
 
 # --- Pruebas automáticas con 3 casos distintos (puedes correr esto en vez del menú) ---
 def pruebas():
