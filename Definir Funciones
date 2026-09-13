@@ -1,0 +1,24 @@
+code = '''def calcularTotal(precio, cantidad):
+    # Calcula el total de un producto según su precio y cantidad
+    total = precio * cantidad
+    return total
+
+
+def validarStock(cantidad, umbral=5):
+    # Verifica si la cantidad disponible está por debajo del stock mínimo
+    stock_bajo = cantidad < umbral
+    return stock_bajo
+'''
+
+p = doc.add_paragraph()
+run = p.add_run(code)
+run.font.name = 'Courier New'
+run.font.size = Pt(10)
+
+doc.add_heading('Pruebas', level=2)
+
+test_code = '''print(calcularTotal(2.50, 4))
+print(calcularTotal(10, 2))
+
+print(validarStock(3))
+print(validarStock(10))
