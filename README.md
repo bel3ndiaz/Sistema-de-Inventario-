@@ -70,7 +70,7 @@ Integrante	Trabajo	Archivos
 Juan Miguel Posada	Cálculo y validación	inventario.py 
 María Belén Díaz	Registro, búsqueda y reporte	inventario.py
 José Daniel Gregg	Programa principal y pruebas	main.py
-Rafael Avalos	Integración y documentación	README.md
+Rafael Avalos, Horacio Larios	Integración y documentación	README.md
 
 Notas de integración
 
