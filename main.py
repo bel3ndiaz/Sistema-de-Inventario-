@@ -4,7 +4,7 @@
 from inventario import registrarProducto, buscarProducto, generarReporte
 
 
-def mostrarMenu():
+def mostrarMenu(): # Muestra las opciones disponibles del sistema de inventario
     print("\n--- SISTEMA DE INVENTARIO ---")
     print("1. Registrar producto")
     print("2. Buscar producto")
@@ -12,22 +12,22 @@ def mostrarMenu():
     print("4. Salir")
 
 
-def main():
+def main(): # Crea el inventario vacío y prepara la variable que guardará la opción
     inventario = []
     opcion = ""
 
-    while opcion != "4":
+    while opcion != "4": # Muestra el menú y pide una opción
         mostrarMenu()
         opcion = input("Elige una opción: ")
 
-        if opcion == "1":
+        if opcion == "1": # Solicita los datos de un producto y lo agrega
             nombre = input("Nombre del producto: ")
             precio = float(input("Precio: "))
             cantidad = int(input("Cantidad: "))
             inventario = registrarProducto(nombre, precio, cantidad, inventario)
             print(f"Producto '{nombre}' registrado correctamente.")
 
-        elif opcion == "2":
+        elif opcion == "2": # Busca un producto por nombre y muestra si fue encontrado.
             nombre = input("Nombre del producto a buscar: ")
             resultado = buscarProducto(nombre, inventario)
             if resultado is not None:
@@ -35,7 +35,7 @@ def main():
             else:
                 print("Producto no encontrado.")
 
-        elif opcion == "3":
+        elif opcion == "3": # Muestra los productos con stock bajo.
             reporte = generarReporte(inventario)
             print(f"Valor total del inventario: {reporte['valor_total']}")
             if reporte["productos_bajo_stock"]:
@@ -43,7 +43,7 @@ def main():
             else:
                 print("Ningún producto con stock bajo.")
 
-        elif opcion == "4":
+        elif opcion == "4": # Finaliza el programa o indica si no es válido
             print("Saliendo del sistema...")
 
         else:
@@ -51,7 +51,7 @@ def main():
 
 
 # --- Pruebas automáticas con 3 casos distintos (puedes correr esto en vez del menú) ---
-def pruebas():
+def pruebas(): # Crea productos de ejemplo
     inventario = []
     inventario = registrarProducto("Cuaderno", 1.50, 3, inventario)   # stock bajo
     inventario = registrarProducto("Lapicero", 0.75, 20, inventario)  # stock normal
@@ -64,5 +64,5 @@ def pruebas():
     print(generarReporte(inventario))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Ejecuta el menú principal cuando se abre el archivo
     main()
