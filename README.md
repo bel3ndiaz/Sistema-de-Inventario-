@@ -77,8 +77,5 @@ Notas de integración
 Se confirmó que inventario.py importa y usa correctamente calcularTotal() y
 validarStock() de calculos.py .
 
-Se confirmó que main.py importa registrarProducto() , buscarProducto() y
-generarReporte() sin errores.
-
 Se corrieron ambos modos ( pruebas() automático y main() interactivo) end-to-end
 sin errores.
