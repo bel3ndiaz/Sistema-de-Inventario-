@@ -134,11 +134,12 @@ Reporte esperado: valor\_total = 119.5 , productos\_bajo\_stock = \['Cuaderno',
 
 |**Integrante**|**Trabajo**|**Archivos**|
 |-|-|-|
+
 |**Juan Miguel Posada**|Cálculo y validación|inventario.py |
 |**María Belén Díaz**|Registro, búsqueda y reporte|inventario.py|
 |**José Daniel Gregg**|Programa principal y pruebas|main.py|
 |**Rafael Avalos**|Integración y documentación|README.md|
-
+|**Horacio A Larios C**| Debbuging y Dirreciòn general|inventario.py |
 
 
 #### Notas de integración
